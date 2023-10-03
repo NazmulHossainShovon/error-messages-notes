@@ -1,2 +1,7 @@
 1. Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves 
 **solution: just run again
+2. Error: mocha-jsdom: already a browser environment, or mocha-jsdom invoked twice. use 'skipWindowCheck' to disable this check.
+**solution: call 
+global.document = jsdom({
+  url: "http://localhost:3000/",
+}); in only one test file if there are multiple test files
