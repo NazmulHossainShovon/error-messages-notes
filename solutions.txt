@@ -1,0 +1,7 @@
+1. to add local font file in nextjs, put the folder in app/fonts folder. then do like below:
+    import localFont from 'next/font/local';
+    const segoeUI = localFont({
+    src: './fonts/SegoeUI.woff',
+    display: 'swap',
+    style: 'normal',
+    });
